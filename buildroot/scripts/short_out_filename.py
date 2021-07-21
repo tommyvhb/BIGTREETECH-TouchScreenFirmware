@@ -9,7 +9,7 @@ def make_short_file(source, target, env):
     filename = flags.get("HARDWARE") + "." + flags.get("SOFTWARE_VERSION")
     filename_short = flags.get("HARDWARE_SHORT") + flags.get("SOFTWARE_VERSION_SHORT")
     # do some actions
-    shutil.copyfile(buildDir+"/"+filename+".bin", buildDir+"/"+filename_short+".new")
+    shutil.copyfile(buildDir + "/" + filename + ".bin", buildDir + "/" + filename_short + ".new")
     print("Done.")
 
 env.AddPostAction("buildprog", make_short_file)

@@ -4,9 +4,8 @@
 extern "C" {
 #endif
 
-#include <stdint.h>
 #include <stdbool.h>
-#include "includes.h"
+#include <stdint.h>
 
 void caseLightValueQuery(void);
 void caseLightSetState(bool state);
@@ -16,8 +15,7 @@ uint8_t caseLightGetBrightness(void);
 uint8_t caseLightGetBrightnessPercent(void);
 bool caseLightGetState(void);
 void loopCaseLight(void);
-void caseLightToggleState(void);
-void caseLightSendWaiting(bool isWaiting);
+void caseLightApplied(bool applied);
 void caseLightChangeBrightness(int8_t brightness_delta);
 void caseLightChangeBrightnessPrecent(int8_t brightness_delta_percent);
 
